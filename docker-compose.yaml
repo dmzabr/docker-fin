@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  adminer:
+    image: adminer:4.8.1
+    restart: always
+    ports:
+      - "6080:8080"
+  db:
+    image: mariadb:10.10.2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: a123
